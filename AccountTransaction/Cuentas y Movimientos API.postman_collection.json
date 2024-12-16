@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "a75ba33c-9757-456e-87b5-1ed412f3558c",
+		"name": "Cuentas y Movimientos API",
+		"description": "Colección para probar las rutas de la API de Cuentas y Movimientos.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15035281"
+	},
+	"item": [
+		{
+			"name": "Get Account By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/Cuentas/:accountId",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"Cuentas",
+						":accountId"
+					],
+					"variable": [
+						{
+							"key": "accountId",
+							"value": "00000000-0000-0000-0000-000000000000",
+							"description": "El ID de la cuenta a buscar."
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"accountNumber\": \"1234567890\",\n    \"accountType\": \"Savings\",\n    \"estado\": true,\n    \"clientId\": \"00000000-0000-0000-0000-000000000000\",\n    \"initialBalance\": 1000.00\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/Cuentas",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"Cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Account",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/Cuentas/:accountId",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"Cuentas",
+						":accountId"
+					],
+					"variable": [
+						{
+							"key": "accountId",
+							"value": "00000000-0000-0000-0000-000000000000",
+							"description": "El ID de la cuenta a eliminar."
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Movement",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"AccountId\": \"0af7d6af-c91e-4b60-a771-249f9961485d\",\n    \"Value\": 0\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/Movimientos",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"Movimientos"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:5001"
+		}
+	]
+}
