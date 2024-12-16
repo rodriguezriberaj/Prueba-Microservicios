@@ -22,9 +22,13 @@ Este proyecto consta de dos microservicios diseñados siguiendo el enfoque **Dom
 
 ## 📝 **Descripción del Proyecto**
 
-Este proyecto ha sido desarrollado bajo el enfoque **DDD**, separando claramente el dominio del resto de las capas y manteniendo la lógica de negocio independiente.  
+Este proyecto ha sido desarrollado bajo el enfoque **DDD**, separando claramente el dominio del resto de las capas y manteniendo la lógica de negocio independiente. 
+
 Se utiliza el patrón **CQRS** para diferenciar las operaciones de lectura (**Queries**) y las operaciones de escritura (**Commands**).  
+
 Los **Casos de Uso** se encuentran en la capa de aplicación, organizados de forma modular y acorde con las responsabilidades del sistema.
+
+Cada **Microservicio** tiene su propia Base de Datos y se crean automáticamente.
 
 ---
 
